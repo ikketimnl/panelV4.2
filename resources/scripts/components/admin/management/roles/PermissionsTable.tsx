@@ -1,4 +1,4 @@
-import { getRolePermisisons, updateRole } from '@/api/admin/roles';
+import { getRolePermissions, updateRole } from '@/api/admin/roles';
 import Spinner from '@/components/elements/Spinner';
 import { useEffect, useState } from 'react';
 import { PanelPermissions } from '@/state/permissions';
