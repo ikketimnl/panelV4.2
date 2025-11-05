@@ -1,15 +1,15 @@
 import { useStoreState } from 'easy-peasy';
 import { NavLink, Route, Routes } from 'react-router-dom';
-import Avatar from '@/components/Avatar';
-import Sidebar from '@elements/Sidebar';
+import Avatar from '@/elements/Avatar';
+import Sidebar from '@/elements/Sidebar';
 import AdminIndicators from '@admin/AdminIndicators';
 import { usePersistedState } from '@/plugins/usePersistedState';
-import MobileSidebar from '@elements/MobileSidebar';
-import Pill from '@/components/elements/Pill';
-import ErrorBoundary from '@/components/elements/ErrorBoundary';
+import MobileSidebar from '@/elements/MobileSidebar';
+import Pill from '@/elements/Pill';
+import ErrorBoundary from '@/elements/ErrorBoundary';
 import routes from './routes';
-import Spinner from '@/components/elements/Spinner';
-import { NotFound } from '@/components/elements/ScreenBlock';
+import Spinner from '@/elements/Spinner';
+import { NotFound } from '@/elements/ScreenBlock';
 import { PuzzleIcon, ReplyIcon } from '@heroicons/react/outline';
 import { Fragment } from 'react';
 
@@ -40,14 +40,18 @@ function AdminRouter() {
             </MobileSidebar>
             <Sidebar className={'flex-none'} $collapsed={collapsed} theme={theme}>
                 <div
-                    className={'h-16 w-full flex flex-col items-center justify-center my-6 select-none cursor-pointer'}
+                    className={'w-full flex flex-col items-center justify-center my-6 select-none cursor-pointer'}
                     onClick={() => setCollapsed(!collapsed)}
                 >
                     {!collapsed ? (
-                        <h1 className={'text-2xl text-neutral-50 whitespace-nowrap font-medium'}>{settings.name}</h1>
+                        <img
+                            src={settings.logo?.toString() || 'https://ikketim.nl/wp-content/uploads/2025/11/BannerLogo3.png'}
+                            className={'mt-4 w-full h-auto object-contain px-2'}
+                            alt={'Logo'}
+                        />
                     ) : (
                         <img
-                            src={'https://avatars.githubusercontent.com/u/91636558'}
+                            src={settings.logo?.toString() || 'https://ikketim.nl/wp-content/uploads/2025/09/cropped-ikketim-logo-new.png'}
                             className={'mt-4 w-12'}
                             alt={'Logo'}
                         />
