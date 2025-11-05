@@ -12,7 +12,7 @@ module.exports = {
                 slate: colors.slate,
                 // "primary" and "neutral" are deprecated, prefer the use of "blue" and "gray"
                 // in new code.
-                primary: colors.green,
+                primary: colors.pink,
                 neutral: colors.slate,
                 cyan: colors.cyan,
                 zinc: colors.zinc,
@@ -24,7 +24,7 @@ module.exports = {
                 250: '250ms',
             },
             backgroundImage: {
-                'login': "url('https://images.unsplash.com/photo-1531257114315-24a694751517')",
+                'login': "url('https://ikketim.nl/wp-content/uploads/2025/10/panel_bg-scaled.jpg')",
             },
             borderColor: theme => ({
                 default: theme('colors.neutral.400', 'currentColor'),
